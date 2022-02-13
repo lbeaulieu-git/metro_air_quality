@@ -2,12 +2,12 @@
 
 <h2 align=center><font size = 5>Prédiction du niveau de pollution dans le métro parisien</font></h1>
 
-<b>Remarque préliminaire :</b> le présent rapport est un condensé des résultats obtenus.<br/>
+<i><b>Remarque préliminaire :</b> le présent rapport est un condensé des résultats obtenus.<br/>
 Les notebooks correspondant aux différentes parties sont : <br>
 - **[3_first_analysis.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/3_first_analysis.ipynb)** <br>
 - **[4_data_ext_cleaning.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/4_data_ext_cleaning.ipynb)** <br>
 - **[5_data_processing.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/5_data_processing.ipynb)** <br>
-
+</i>
 
 <h3>Table des matières</h3>
 
