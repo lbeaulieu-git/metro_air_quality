@@ -1,6 +1,5 @@
-<center><img src="0 - Pictures/metro.jpg" /></center>
-
-<h2 align=center><font size = 5>Prédiction du niveau de pollution dans le métro parisien</font></h1>
+<h2 align=center><img src="0 - Pictures/metro.jpg" /><br>
+	<font size = 5>Prédiction du niveau de pollution dans le métro parisien</font></h1>
 
 <i><b>Remarque préliminaire :</b> le présent rapport est un condensé des résultats obtenus.<br/>
 Les notebooks correspondant aux différentes parties sont : <br>
