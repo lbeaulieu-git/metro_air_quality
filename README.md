@@ -1,15 +1,15 @@
-Louis BEAULIEU - Sara BOUTIGNY - Lucas MAINGUET - Quang-Vinh TA <br>
+<center><img src="0 - Pictures/metro.jpg" /></center>
 
-<h1 align=center><font size = 5>SD701 - Rapport de projet : prédiction du niveau de pollution dans le métro parisien</font></h1>
+<h2 align=center><font size = 5>Prédiction du niveau de pollution dans le métro parisien</font></h1>
 
-<i><b>Remarque préliminaire :</b> le présent rapport est un condensé des résultats obtenus. Le code complet des différentes parties est disponible sur le [repo Github accessible via ce lien](https://github.com/tajulien/MSBGD-SD701-BigDataMining/tree/main/Rapport). <br/>
-En particulier, les notebooks correspondant aux différentes parties sont : <br>
-- **[3_first_analysis.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/3_first_analysis.ipynb)** <br>
-- **[4_data_ext_cleaning.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/4_data_ext_cleaning.ipynb)** <br>
-- **[5_data_processing.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/5_data_processing.ipynb)** <br>
-</i>
+<b>Remarque préliminaire :</b> le présent rapport est un condensé des résultats obtenus.<br/>
+Les notebooks correspondant aux différentes parties sont : <br>
+- **[3_first_analysis.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/3_first_analysis.ipynb)** <br>
+- **[4_data_ext_cleaning.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/4_data_ext_cleaning.ipynb)** <br>
+- **[5_data_processing.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/5_data_processing.ipynb)** <br>
 
-<h2>Table des matières</h2>
+
+<h3>Table des matières</h3>
 
 <div class="alert alert-block alert-info" style="margin-top: 20px">
 <ol>
@@ -44,7 +44,7 @@ Pour mener à bien cette étude, les données ci-dessous ont été collectées. 
 Il existe plusieurs API (ex : openweatherdatas) qui disposent d'un historique complet sur chaque localisation. Malheureusement ces API sont la plupart du temps payantes.
 Puisque l'utilisation des données est ici à visée strictement pédagogique, nous avons opté pour la solution du scraping du site [https://www.infoclimat.fr](https://www.infoclimat.fr).
 
-Le contenu de l'algorithme est disponible dans le dossier : **[3 - Scraping météo/](https://github.com/tajulien/MSBGD-SD701-BigDataMining/tree/main/Rapport/3%20-%20Scraping%20météo)**
+Le contenu de l'algorithme est disponible dans le dossier : **[3 - Scraping météo/](https://github.com/lbeaulieu-git/metro_air_quality/tree/main/3%20-%20Scraping%20m%C3%A9t%C3%A9o)**
 
 Ce scraping a été réalisé dans la fourchette du 1er janvier 2013 au 7 septembre 2021. La plupart des données furent compliquées à retrouver avec plus de 15 000 valeurs invalides (pour environ 70 000 lignes et 15 colonnes).
 Nous avons donc procédé à un nettoyage des données. La plupart du temps, les difficultés de collecte étaient dues à une mise en forme hétérogène des différentes pages du site.
@@ -62,7 +62,7 @@ Nous avons par la suite exporté toutes les données nettoyées sur une base de 
 <h1 id="ref3">3. Nettoyage du jeu de données "qualité de l'air en station" et premières analyses</h1>
 
 L'idée de cette partie est de proposer une première analyse du dataset de qualité de l'air dans le métro.<br>
-Le fichier **[3_first_analysis.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/3_first_analysis.ipynb)** présente la démarche effectuée.
+Le fichier **[3_first_analysis.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/3_first_analysis.ipynb)** présente la démarche effectuée.
 
 ### &nbsp;&nbsp;&nbsp; **3.1. Présentation des features**
 
@@ -246,7 +246,7 @@ Or, dans le modèle introduit précédemment, rien ne permet justement de diffé
 <h1 id="ref4">4. Nettoyage des autres jeux de données</h1>
 
 On souhaite étudier plus précisément l'influence des paramètres extérieurs (météo, qualié de l'air extérieur) et des données de fréquentation (affluence en station, trafic ferroviaire) sur la qualité de l'air dans la station.<br>
-Le fichier **[4_data_ext_cleaning.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/4_data_ext_cleaning.ipynb)** présente le processus de chargement et nettoyage des données.
+Le fichier **[4_data_ext_cleaning.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/4_data_ext_cleaning.ipynb)** présente le processus de chargement et nettoyage des données.
 
 ### &nbsp;&nbsp;&nbsp; **4.1. DataFrames générés**
 
@@ -278,7 +278,7 @@ Le DataFrame global une fois généré permet d'effectuer une analyse de corrél
 <h1 id="ref5">5. Etudes de corrélations</h1>
 
 L'idée est de tester 3 algorithmes (régression linéaire, KNN, perceptron multicouche) et de déterminer le plus performant sur la prédiction des niveaux de pollution.<br>
-Le fichier **[5_data_processing.ipynb](https://github.com/tajulien/MSBGD-SD701-BigDataMining/blob/main/Rapport/5_data_processing.ipynb)** présente la démarche effectuée.
+Le fichier **[5_data_processing.ipynb](https://github.com/lbeaulieu-git/metro_air_quality/blob/main/5_data_processing.ipynb)** présente la démarche effectuée.
 
 Les données de qualité de l'air extérieur ne sont disponibles qu'à partir de fin septembre 2017. On restreint donc l'étude à la période suivant ce moment.<br>
 De plus, les lignes présentant des valeurs manquantes ont été neutralisées, amenant le nombre de valeurs par colonne à 17 555. Les variables ont par ailleurs été centrées puis réduites.
@@ -302,12 +302,12 @@ Ces résultats moyens poussent à découper l'analyse en tranches. Une approche 
 - L'analyse du seul dataset de qualité de l'air à la station Franklin-Roosevelt a permis d'établir une bonne modélisation des niveaux de pollution moyens sur différentes échelles de temps (ex : sur une année particulière, un jour de semaine, une heure donnée, etc...).
 - La suite des travaux a visé à prédire les niveaux de pollution en fonction des paramètres externes. 3 Algorithmes ont été testés. Le plus efficace est l'application d'un perceptron multicouche qui donne des résultats moyens à bons en fonction de la variable prédite et de la période étudiée (ex : la prédiction du niveau de NO donne un coefficient de détermination de 0.36 au S2 2020 et 0.70 au S1 2021).
 - Plusieurs hypothèses et paramètres supplémentaires pourraient être pris en compte afin d'affiner l'analyse :
-> - Meilleure gestion des données disponibles. En particulier, le remplacement des valeurs manquantes au lieu de leur suppression, ou bien le passage à une échelle "tranche horaire" pourraient avoir un intérêt.
-> - Etude de l'influence de la baisse des niveaux de pollution au fil du temps sur le modèle. 
-> - Recherche d'une profondeur d'historique suffisante pour permettre une analyse de long terme plus précise (trafic ferroviaire, pollution extérieure en particulier)
-> - Affinage de la maille de certains paramètres (fréquentation des stations, trafic ferroviaire)
-> - Prise en compte de données annexes :
->> - Historique des travaux
->> - Historique des événements affectant le trafic (grèves, manifestations, confinements...)
->> - Etat et renouvellement du matériel roulant
->> - ...
+	- Meilleure gestion des données disponibles. En particulier, le remplacement des valeurs manquantes au lieu de leur suppression, ou bien le passage à une échelle "tranche horaire" pourraient avoir un intérêt.
+	- Etude de l'influence de la baisse des niveaux de pollution au fil du temps sur le modèle. 
+	- Recherche d'une profondeur d'historique suffisante pour permettre une analyse de long terme plus précise (trafic ferroviaire, pollution extérieure en particulier)
+	- Affinage de la maille de certains paramètres (fréquentation des stations, trafic ferroviaire)
+	- Prise en compte de données annexes :
+		- Historique des travaux
+		- Historique des événements affectant le trafic (grèves, manifestations, confinements...)
+		- Etat et renouvellement du matériel roulant
+		- ...
